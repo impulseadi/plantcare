@@ -10,12 +10,12 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      
       <Hero />
       <BestsellingPlants />
       <BestsellingDecor />
       <CustomerReviews />
-      <Footer />
+      
     </>
   );
 };
