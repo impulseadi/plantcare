@@ -1,29 +1,22 @@
-import { useState } from 'react'
-import React from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import BestsellingPlants from './components/BestSellingPlants'
-import BestsellingDecor from './components/BestsellingDecor'
-import CustomerReviews from './components/CustomerReviews'
-import Footer from './components/Footer'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import PlantPage from "./pages/PlantPage";
+import Layout from "./components/Layout";
+import Decor from "./pages/Decor";
 
-
-function App() {
- 
-
+const App = () => {
   return (
-    <>
-    <Navbar/>
-    <Hero/>
-    <BestsellingPlants/>
-    <BestsellingDecor/>
-    <CustomerReviews/>
-    <Footer/>
-   </>
-  )
-}
+    <Layout>
+ <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/plants" element={<PlantPage />} />
+      <Route path="/decor" element={<Decor />} />
 
-export default App
+    </Routes>
+    </Layout>
+   
+  );
+};
+
+export default App;
